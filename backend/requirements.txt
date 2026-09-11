@@ -1,0 +1,13 @@
+numpy
+scikit-learn
+groq
+fastapi
+uvicorn
+python-dotenv
+pydantic
+pypdf
+duckduckgo_search
+langgraph
+rank-bm25
+sentence-transformers
+langchain

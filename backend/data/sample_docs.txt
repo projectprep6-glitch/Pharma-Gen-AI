@@ -1,0 +1,11 @@
+Retrieval-Augmented Generation (RAG) combines a retrieval system with a generative model.
+The retriever finds relevant documents and the generator conditions on them to produce answers.
+
+Embeddings convert text into dense vectors so semantically similar passages are near each other.
+Common embedding models include sentence-transformers like all-MiniLM-L6-v2.
+
+A vector index (FAISS, Annoy, or sklearn NearestNeighbors) stores vectors for fast similarity search.
+The retriever issues nearest-neighbour queries over the index to get candidate passages.
+
+In the RAG pattern, retrieved passages are passed as context to the LLM which then composes
+an answer grounded in the retrieved evidence. This reduces hallucinations and improves factuality.

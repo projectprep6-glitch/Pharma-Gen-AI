@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Chatbot</p>
+          <h1>RAG Intelligence</h1>
+          <p>
+            Ask questions about Bristol Myers Squibb marketing and strategy and NLP topics, and get
+            answers grounded in indexed documents.
+          </p>
+        </div>
+
+        <div class="query-panel card">
+          <div class="query-header">
+            <div>
+              <h2>Ask the model</h2>
+              <p>Enter your question and receive a grounded AI response.</p>
+            </div>
+          </div>
+
+          <textarea id="queryInput" placeholder="Type your question here..."></textarea>
+          <button id="runQuery">Run Query</button>
+
+          <div class="status-row" id="statusRow">
+            <span id="statusText">Ready to query the RAG pipeline.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-section">
+        <div class="results-card card">
+          <div class="results-header">
+            <h2>Answer</h2>
+          </div>
+          <div id="answerBlock" class="result-block empty">
+            <p>Once you run a query, the generated response will appear here.</p>
+          </div>
+        </div>
+
+        <div class="results-card card">
+          <div class="results-header">
+            <h2>Retrieved Passages</h2>
+          </div>
+          <div id="retrievedList" class="result-block empty">
+            <p>The top supporting sources will appear after the request completes.</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer-bar">
+        <p>Frontend built for the BMS MedInsight RAG demo.</p>
+        <p>Backend API: <code>http://127.0.0.1:8000/api/query</code></p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
